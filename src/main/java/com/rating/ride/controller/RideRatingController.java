@@ -19,7 +19,7 @@ public class RideRatingController {
     private IPassengerInterface passengerService;
 
     @RequestMapping(method= RequestMethod.POST, value="/driver")
-    public String RateRide(@RequestBody Driver driver) {
+    public String rateDriver(@RequestBody Driver driver) {
         return driverService.rateDriver(driver);
     }
 
@@ -29,7 +29,7 @@ public class RideRatingController {
     }
 
     @RequestMapping(method=RequestMethod.POST, value="/Passenger")
-    public String RatePassenger(@RequestBody Passenger Passenger) {
+    public String ratePassenger(@RequestBody Passenger Passenger) {
         return passengerService.ratePassenger(Passenger);
     }
 
