@@ -18,12 +18,12 @@ public class RideRatingController {
     @Autowired
     private IPassengerInterface passengerService;
 
-    @RequestMapping(method= RequestMethod.POST, value="/ride")
+    @RequestMapping(method= RequestMethod.POST, value="/driver")
     public String RateRide(@RequestBody Driver driver) {
         return driverService.rateDriver(driver);
     }
 
-    @RequestMapping(method=RequestMethod.GET, value="/ride/{id}")
+    @RequestMapping(method=RequestMethod.GET, value="/driver/{id}")
     public double getDriverRatings(@PathVariable int id) {
         return driverService.getDriverRatings(id);
     }
